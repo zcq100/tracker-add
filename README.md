@@ -20,7 +20,7 @@ Automatically checks new torrents and adds trackers
 ```
 /opt/bin # ./add_trackers-auto.sh
 URL for https://hastebin.com/raw/bererufibu
-Adding trackers for HHhH.2017.AVO.BadBajo.HDRip.AVC.mkv...
+Adding trackers for Film.HDRip.AVC.mkv...
 
 ######################################################################## 100,0%
 * http://tracker.dutchtracking.nl:80/announce... failed.
