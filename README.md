@@ -9,10 +9,18 @@ See no peers for some torrent(s)? Add more tracker(s) from Transmission
 wget --no-check-certificate -O /opt/bin/add_trackers.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add.sh
 chmod +x /opt/bin/add_trackers.sh
 ```
+or
 
+```
+wget --no-check-certificate -O /opt/bin/add_trackers.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add-auto.sh
+chmod +x /opt/bin/add_trackers-auto.sh
+```
 ## Usage
-
-Run script to add some more trackers for active torrents:
+Automatically checks new torrents and adds trackers
+```
+/opt/bin # ./add_trackers-auto.sh
+```
+Run manual script to add some more trackers for active torrents:
 
 ```
 /opt/bin # ./add_trackers.sh
