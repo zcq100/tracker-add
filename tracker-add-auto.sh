@@ -1,4 +1,4 @@
-#!/bin/bash -xv
+#!/bin/bash
 # Get transmission credentials
 auth=user:password
 while true
