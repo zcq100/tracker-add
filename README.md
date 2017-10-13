@@ -19,6 +19,18 @@ chmod +x /opt/bin/add_trackers-auto.sh
 Automatically checks new torrents and adds trackers
 ```
 /opt/bin # ./add_trackers-auto.sh
+URL for https://hastebin.com/raw/bererufibu
+Adding trackers for HHhH.2017.AVO.BadBajo.HDRip.AVC.mkv...
+
+######################################################################## 100,0%
+* http://tracker.dutchtracking.nl:80/announce... failed.
+* http://tracker.edoardocolombo.eu:6969/announce... failed.
+* http://tracker.ex.ua:80/announce... failed.
+* http://tracker.kicks-ass.net:80/announce... failed.
+* http://tracker.mg64.net:6881/announce... done.
+* http://tracker.tfile.me/announce... failed.
+* http://tracker1.wasabii.com.tw:6969/announce... done.
+* http://tracker2.itzmx.com:6961/announce... done.
 ```
 Run manual script to add some more trackers for active torrents:
 
