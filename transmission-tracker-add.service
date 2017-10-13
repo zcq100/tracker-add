@@ -4,7 +4,7 @@ Requires=network.target
 
 [Service]
 Type=forked
-ExecStart=/opt/bin/add_trackers-auto.sh
+ExecStart=/opt/bin/add_trackers_auto.sh
 Restart=always
 
 [Install]
