@@ -16,13 +16,13 @@ wget --no-check-certificate -O /opt/bin/add-trackers-auto.sh https://raw.githubu
 wget --no-check-certificate -O /etc/systemd/system/transmission-tracker-add.service https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/transmission-tracker-add.service
 chmod +x /opt/bin/add_trackers_auto.sh
 systemctl daemon-reload
-systemctl enable transmission-tracker-add.service
-systemctl start transmission-tracker-add.service
 ```
 ## Usage
 Automatically checks new torrents and adds trackers
 ```
-/opt/bin # ./add_trackers-auto.sh
+systemctl enable transmission-tracker-add.service
+systemctl start transmission-tracker-add.service
+
 URL for https://hastebin.com/raw/bererufibu
 Adding trackers for Film.HDRip.AVC.mkv...
 
