@@ -36,7 +36,7 @@ Adding trackers for Film.HDRip.AVC.mkv...
 * http://tracker1.wasabii.com.tw:6969/announce... done.
 * http://tracker2.itzmx.com:6961/announce... done.
 ```
-Run manual script to add some more trackers for active torrents:
+Run manual script to add some more trackers for active torrents using torrentz:
 
 ```
 /opt/bin # ./add_trackers.sh
