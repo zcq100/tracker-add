@@ -4,10 +4,11 @@ See no peers for some torrent(s)? Add more tracker(s) from Transmission
 
 ## Installation
 * Download script and make it executable:
-
+Edit settings for transmission set rpc-enabled, rpc-username and rpc-password
 ```
 wget --no-check-certificate -O /opt/bin/add_trackers.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add.sh
 chmod +x /opt/bin/add_trackers.sh
+Set user and password in add_trackers.sh
 ```
 or
 
