@@ -8,20 +8,15 @@ add_trackers () {
     torrent_hash=$1
     id=$2
 for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt https://hastebin.com/raw/bererufibu ; do
-    echo -e "\e[1m\e[5m"
     echo "URL for ${base_url}"
-    echo -e "Adding trackers for \e[91m$torrent_name..."
-    echo -en "\e[0m"
-    echo -e "\e[2m\e[92m"
+    echo "Adding trackers for $torrent_name..."
 for tracker in $(curl -# "${base_url}") ; do
-    echo -en "\e[0m"
-    echo -ne "\e[93m*\e[0m ${tracker}..."
+    echo "${tracker}..."
 if transmission-remote  --auth="$auth" --torrent "${torrent_hash}" -td "${tracker}" | grep -q 'success'; then
-    echo -e '\e[91m failed.'
-    echo -en "\e[0m"
+    echo -e 'failed.'
+
 else
-    echo -e '\e[92m done.'
-    echo -en "\e[0m"
+    echo -e 'done.'
 fi
  done
 done
