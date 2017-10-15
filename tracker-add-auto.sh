@@ -3,7 +3,7 @@
 auth=user:password
 while true
 do
-sleep 1
+sleep 5
 add_trackers () {
     torrent_hash=$1
     id=$2
@@ -14,14 +14,13 @@ for tracker in $(curl -# "${base_url}") ; do
     echo "${tracker}..."
 if transmission-remote  --auth="$auth" --torrent "${torrent_hash}" -td "${tracker}" | grep -q 'success'; then
     echo -e 'failed.'
-
 else
     echo -e 'done.'
 fi
- done
 done
-sleep 5m
-rm /tmp/TTAA.$id
+done
+sleep 3m
+rm /tmp/TTAA.$id.lock
 }
 # Get list of active torrents
     ids="$(transmission-remote --auth="$auth" --list | grep -E 'Downloading' | grep '^ ' | awk '{ print $1 }')"
@@ -31,13 +30,12 @@ add_date_t="$(date -d "$add_date" "+%Y-%m-%d %H:%M")"
 dater="$(date "+%Y-%m-%d %H:%M")"
 dateo="$(date -d "1 minutes ago" "+%Y-%m-%d %H:%M")"
 
-if [ ! -f /tmp/TTAA.$id ]; then
-#if [[ $add_date_t == $dater ]]; then
+if [ ! -f /tmp/TTAA.$id.lock ]; then
 if [[ ( "$add_date_t" == "$dater" || "$add_date_t" == "$dateo" ) ]]; then
     hash="$(transmission-remote --auth="$auth"  --torrent "$id" --info | grep '^  Hash: ' | awk '{ print $2 }')"
     torrent_name="$(transmission-remote --auth="$auth"  --torrent "$id" --info | grep '^  Name: ' |cut -c 9-)"
     add_trackers "$hash" "$id" &
-    touch /tmp/TTAA.$id
+    touch /tmp/TTAA.$id.lock
 fi
 fi
 done
