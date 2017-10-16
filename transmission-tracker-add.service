@@ -3,9 +3,10 @@ Description=transmission tracker add
 Requires=network.target
 
 [Service]
-Type=forked
+Type=simple
 ExecStart=/opt/bin/add_trackers_auto.sh
-Restart=always
+ExecStop=/bin/kill -s TERM $MAINPID
+KillMode=control-group
 
 [Install]
 WantedBy=multi-user.target

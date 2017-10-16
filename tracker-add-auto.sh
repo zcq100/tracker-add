@@ -23,7 +23,7 @@ sleep 3m
 rm /tmp/TTAA.$id.lock
 }
 # Get list of active torrents
-    ids="$(transmission-remote --auth="$auth" --list | grep -E 'Downloading' | grep '^ ' | awk '{ print $1 }')"
+    ids="$(transmission-remote --auth="$auth" --list | grep -vE 'Seeding|Stopped|Finished' | grep '^ ' | awk '{ print $1 }')"
     for id in $ids ; do
 add_date="$(transmission-remote --auth="$auth"  --torrent "$id" --info| grep '^  Date added: ' |cut -c 21-)"
 add_date_t="$(date -d "$add_date" "+%Y-%m-%d %H:%M")"
