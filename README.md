@@ -16,10 +16,11 @@ or
 wget --no-check-certificate -O /opt/bin/add-trackers-auto.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker_add_auto.sh
 wget --no-check-certificate -O /etc/systemd/system/transmission-tracker-add.service https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/transmission-tracker-add.service
 chmod +x /opt/bin/add_trackers_auto.sh
+Set user and password in add_trackers_auto.sh
 systemctl daemon-reload
 ```
 ## Usage
-Automatically checks new torrents and adds trackers
+Automatically checks new torrents and adds trackers:
 ```
 systemctl enable transmission-tracker-add.service
 systemctl start transmission-tracker-add.service
