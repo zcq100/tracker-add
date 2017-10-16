@@ -11,11 +11,11 @@ for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/tr
     echo "URL for ${base_url}"
     echo "Adding trackers for $torrent_name..."
 for tracker in $(curl -# "${base_url}") ; do
-    echo "${tracker}..."
+    echo -n "${tracker}..."
 if transmission-remote  --auth="$auth" --torrent "${torrent_hash}" -td "${tracker}" | grep -q 'success'; then
-    echo -e 'failed.'
+    echo ' failed.'
 else
-    echo -e 'done.'
+    echo ' done.'
 fi
 done
 done
