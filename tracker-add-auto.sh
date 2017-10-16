@@ -20,7 +20,7 @@ fi
 done
 done
 sleep 3m
-rm /tmp/TTAA.$id.lock
+rm -f /tmp/TTAA.$id.lock
 }
 # Get list of active torrents
     ids="$(transmission-remote --auth="$auth" --list | grep -vE 'Seeding|Stopped|Finished' | grep '^ ' | awk '{ print $1 }')"
