@@ -1,8 +1,7 @@
 #!/bin/bash
 # Get transmission credentials
 auth=user:password
-while true
-do
+while true ; do
 sleep 5
 add_trackers () {
     torrent_hash=$1
@@ -19,21 +18,21 @@ else
 fi
 done
 done
-sleep 3m
-rm -f /tmp/TTAA.$id.lock
+    sleep 3m
+    rm -f /tmp/TTAA.$id.lock
 }
 # Get list of active torrents
     ids="$(transmission-remote --auth="$auth" --list | grep -vE 'Seeding|Stopped|Finished' | grep '^ ' | awk '{ print $1 }')"
-    for id in $ids ; do
-add_date="$(transmission-remote --auth="$auth"  --torrent "$id" --info| grep '^  Date added: ' |cut -c 21-)"
-add_date_t="$(date -d "$add_date" "+%Y-%m-%d %H:%M")"
-dater="$(date "+%Y-%m-%d %H:%M")"
-dateo="$(date -d "1 minutes ago" "+%Y-%m-%d %H:%M")"
+for id in $ids ; do
+    add_date="$(transmission-remote --auth="$auth" --torrent "$id" --info| grep '^  Date added: ' |cut -c 21-)"
+    add_date_t="$(date -d "$add_date" "+%Y-%m-%d %H:%M")"
+    dater="$(date "+%Y-%m-%d %H:%M")"
+    dateo="$(date -d "1 minutes ago" "+%Y-%m-%d %H:%M")"
 
 if [ ! -f /tmp/TTAA.$id.lock ]; then
 if [[ ( "$add_date_t" == "$dater" || "$add_date_t" == "$dateo" ) ]]; then
-    hash="$(transmission-remote --auth="$auth"  --torrent "$id" --info | grep '^  Hash: ' | awk '{ print $2 }')"
-    torrent_name="$(transmission-remote --auth="$auth"  --torrent "$id" --info | grep '^  Name: ' |cut -c 9-)"
+    hash="$(transmission-remote --auth="$auth" --torrent "$id" --info | grep '^  Hash: ' | awk '{ print $2 }')"
+    torrent_name="$(transmission-remote --auth="$auth" --torrent "$id" --info | grep '^  Name: ' |cut -c 9-)"
     add_trackers "$hash" "$id" &
     touch /tmp/TTAA.$id.lock
 fi
