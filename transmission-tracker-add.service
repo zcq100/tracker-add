@@ -8,6 +8,7 @@ ExecStart=/opt/bin/add_trackers_auto.sh
 ExecStop=/bin/kill -s TERM $MAINPID
 ExecStopPost=/bin/rm -f /tmp/TTAA.*.lock
 KillMode=control-group
+StandardOutput=null
 
 [Install]
 WantedBy=multi-user.target
