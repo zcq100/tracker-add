@@ -18,7 +18,7 @@ Automatically checks new torrents and adds trackers:
 systemctl enable transmission-tracker-add.service
 systemctl start transmission-tracker-add.service
 
-service transmission-tracker-add status
+systemctl status transmission-tracker-add.service
 ● transmission-tracker-add.service - transmission tracker add
    Loaded: loaded (/etc/systemd/system/transmission-tracker-add.service; enabled; vendor preset: enabled)
    Active: active (running) since; 0 days ago
