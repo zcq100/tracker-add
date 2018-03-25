@@ -34,6 +34,7 @@ service transmission-tracker-add status
 
 ## Extra manual script
 Set user and password in add_trackers.sh
+
 Run manual script to add some more trackers for active torrents:
 
 ```
