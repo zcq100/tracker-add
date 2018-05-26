@@ -9,6 +9,8 @@ ExecStop=/bin/kill -s TERM $MAINPID
 ExecStopPost=/bin/rm -f /tmp/TTAA.*.lock
 KillMode=control-group
 StandardOutput=null
+CPUSchedulingPolicy=idle
+Nice=19
 
 [Install]
 WantedBy=multi-user.target
