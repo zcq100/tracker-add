@@ -2,7 +2,7 @@
 # Get transmission credentials
 auth=user:password
 while true ; do
-sleep 5
+sleep 25
 add_trackers () {
     torrent_hash=$1
     id=$2
