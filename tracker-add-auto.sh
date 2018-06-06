@@ -6,7 +6,7 @@ sleep 25
 add_trackers () {
     torrent_hash=$1
     id=$2
-for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt https://hastebin.com/raw/bererufibu ; do
+for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt ; do
     echo "URL for ${base_url}"
     echo "Adding trackers for $torrent_name..."
 for tracker in $(curl -# "${base_url}") ; do
