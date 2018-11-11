@@ -32,8 +32,8 @@ systemctl status transmission-tracker-add.service
 
 
 
-## Extra manual script
-Set user and password in add_trackers.sh
+## Extra manual script if you need
+Set user and password in manual-tracker-add.sh
 
 Run manual script to add some more trackers for active torrents:
 
