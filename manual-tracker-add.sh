@@ -4,7 +4,7 @@ auth=user:password
 
 add_trackers () {
     torrent_hash=$1
- for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt https://hastebin.com/raw/bererufibu ; do
+ for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt ; do
     echo -e "\e[1m\e[5m"
     echo "URL for ${base_url}"
     echo -e "Adding trackers for \e[91m$torrent_name..."
