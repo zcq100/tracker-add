@@ -38,7 +38,7 @@ Set user and password in manual-tracker-add.sh
 Run manual script to add some more trackers for active torrents:
 
 ```
-/opt/bin # ./add_trackers.sh
+/opt/bin # ./manual-tracker-add.sh
 URL for https://hastebin.com/raw/bererufibu
 Adding trackers for Film.HDRip.AVC.mkv...
 
