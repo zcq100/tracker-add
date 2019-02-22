@@ -2,6 +2,7 @@
 # Get transmission credentials and ip or dns ardress
 auth=user:password
 host=localhost
+
 while true ; do
 sleep 25
 add_trackers () {
