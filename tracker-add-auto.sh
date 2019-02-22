@@ -1,5 +1,5 @@
 #!/bin/bash
-# Get transmission credentials and ip or dns ardress
+# Get transmission credentials and ip or dns address
 auth=user:password
 host=localhost
 
