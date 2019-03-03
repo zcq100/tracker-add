@@ -4,7 +4,7 @@ Requires=network.target
 
 [Service]
 Type=simple
-ExecStart=/opt/bin/add-trackers-auto.sh
+ExecStart=/docker/transmission/tracker-add/tracker-add-auto.sh
 ExecStop=/bin/kill -s TERM $MAINPID
 ExecStopPost=/bin/rm -f /tmp/TTAA.*.lock
 KillMode=control-group
