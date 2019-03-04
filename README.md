@@ -6,8 +6,8 @@ See no peers for some torrent(s)? Add more tracker(s) from Transmission
 * Download script and make it executable:
 Edit settings for transmission set rpc-enabled, rpc-username and rpc-password
 ```
-wget --no-check-certificate -O /opt/bin/add-trackers-auto.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add-auto.sh
-wget --no-check-certificate -O /etc/systemd/system/transmission-tracker-add.service https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/transmission-tracker-add.service
+wget --no-check-certificate -O /opt/bin/add-trackers-auto.sh https://raw.githubusercontent.com/zcq100/tracker-add/master/tracker-add-auto.sh
+wget --no-check-certificate -O /etc/systemd/system/transmission-tracker-add.service https://raw.githubusercontent.com/zcq100/tracker-add/master/transmission-tracker-add.service
 chmod +x /opt/bin/add-trackers-auto.sh
 Set user and password in add-trackers-auto.sh
 systemctl daemon-reload
