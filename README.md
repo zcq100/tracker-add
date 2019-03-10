@@ -3,8 +3,13 @@
 See no peers for some torrent(s)? Add more tracker(s) from Transmission
 
 ## Installation
-* Download script and make it executable:
+
+* Take image `docker pull andrewmhub/transmission-tracker-add` or
+
+Download script and make it executable:
+
 Edit settings for transmission set rpc-enabled, rpc-username and rpc-password
+
 ```
 wget --no-check-certificate -O /opt/bin/add-trackers-auto.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add-auto.sh
 wget --no-check-certificate -O /etc/systemd/system/transmission-tracker-add.service https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/transmission-tracker-add.service
@@ -14,6 +19,15 @@ systemctl daemon-reload
 ```
 ## Usage
 Automatically checks new torrents and adds trackers:
+
+* Docker way
+
+```docker run --net=host -d -e HOSTPORT=localhost:9091 -e TR_AUTH=user:password --name=transmission-tracker-add andrewmhub/transmission-tracker-add:latest```
+
+if you use transmission daemon in docker then read [Docker Documentation](https://docs.docker.com/network/)
+
+* Systemd way
+
 ```
 systemctl enable transmission-tracker-add.service
 systemctl start transmission-tracker-add.service
