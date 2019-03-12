@@ -1,5 +1,5 @@
 # Get more trackers
-See no peers for some torrent(s)? Add more tracker(s) from Transmission
+See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 
 This script automatically checks new torrents and adds trackers
 
@@ -11,7 +11,7 @@ Take image `docker pull andrewmhub/transmission-tracker-add`
 
 ```docker run --net=host -d -e HOSTPORT=localhost:9091 -e TR_AUTH=user:password --name=transmission-tracker-add andrewmhub/transmission-tracker-add:latest```
 
-if need use another torrent tracker list use docker run env 
+if you need to use another torrent tracker list then use docker run env 
 
 `-e TORRENTLIST=https://raw.githubusercontent.com/user/trackerslist/master/mylist.txt`
 
