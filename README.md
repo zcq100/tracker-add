@@ -58,11 +58,18 @@ wget --no-check-certificate -O tracker-add-auto-router.sh https://raw.githubuser
 chmod +x tracker-add-auto-router.sh
 ```
 Set user and password in tracker-add-auto-router.sh
+
 ```
 ./tracker-add-auto-router.sh &
 ```
-
-
+or
+```
+nohup ./tracker-add-auto-router.sh </dev/null >/var/log/tracker-add-auto.log 2>&1 &
+```
+or
+```
+screen -d -m -S tracker-add-auto path/to/tracker-add-auto-router.sh
+```
 
 
 
