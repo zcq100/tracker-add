@@ -3,6 +3,24 @@ See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 
 This script automatically checks new torrents and adds trackers
 
+#### Changelog
+```
+Mar 27, 2019
+now tracker file saved in tmp directory until update web source
+new exception in "Get list of active torrents", helps to avoid fully loaded torrents
+cosmetic fixes
+
+Feb 22, 2019
+add feature connection to host
+
+May 27, 2018
+wait new torrents 25 sec
+
+May 26, 2018
+Change systemd policy
+CPUSchedulingPolicy=idle
+Nice=19
+```
 ## Installation and usage
 
 #### * Docker way
@@ -74,7 +92,7 @@ screen -d -m -S tracker-add-auto path/to/tracker-add-auto-router.sh
 
 
 
-## Extra manual script if you need
+### Extra manual script if you need
 Set user and password in manual-tracker-add.sh
 
 Run manual script to add some more trackers for active torrents:
