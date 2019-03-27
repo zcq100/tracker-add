@@ -45,8 +45,22 @@ systemctl status transmission-tracker-add.service
            
 ```
 
+* Simple way (for routers)
 
+Requirements: curl, transmission-remote
 
+Download script and make it executable:
+
+Edit settings for transmission set rpc-enabled, rpc-username and rpc-password
+
+```
+wget --no-check-certificate -O tracker-add-auto-router.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add-auto-router.sh
+chmod +x tracker-add-auto-router.sh
+```
+Set user and password in tracker-add-auto-router.sh
+```
+tracker-add-auto-router.sh &
+```
 
 
 
