@@ -5,7 +5,7 @@ This script automatically checks new torrents and adds trackers
 
 ## Installation and usage
 
-* Docker way
+#### * Docker way
 
 Take image `docker pull andrewmhub/transmission-tracker-add`
 
@@ -17,7 +17,8 @@ if you need to use another torrent tracker list then use docker run env
 
 you use transmission daemon in docker then read [Docker Documentation](https://docs.docker.com/network/)
 
-* Systemd way
+
+#### * Systemd way
 
 Download script and make it executable:
 
@@ -45,7 +46,7 @@ systemctl status transmission-tracker-add.service
            
 ```
 
-* Simple way (for routers)
+#### * Simple way (for routers)
 
 Requirements: curl, transmission-remote
 
