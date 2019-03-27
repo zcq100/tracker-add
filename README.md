@@ -59,7 +59,7 @@ chmod +x tracker-add-auto-router.sh
 ```
 Set user and password in tracker-add-auto-router.sh
 ```
-tracker-add-auto-router.sh &
+./tracker-add-auto-router.sh &
 ```
 
 
