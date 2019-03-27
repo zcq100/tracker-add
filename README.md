@@ -6,6 +6,7 @@ This script automatically checks new torrents and adds trackers
 #### Changelog
 ```
 Mar 27, 2019
+add tracker-add-auto-router.sh script for routers
 now tracker file saved in tmp directory until update web source
 new exception in "Get list of active torrents", helps to avoid fully loaded torrents
 cosmetic fixes
