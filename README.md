@@ -3,7 +3,9 @@ See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 
 This script automatically checks new torrents and adds trackers
 
-#### Changelog
+<details>
+  <summary>Changelog</summary>
+   
 ```
 Mar 27, 2019
 add tracker-add-auto-router.sh script for routers
@@ -22,6 +24,9 @@ Change systemd policy
 CPUSchedulingPolicy=idle
 Nice=19
 ```
+</details>
+
+
 ## Installation and usage
 
 #### * Docker way
