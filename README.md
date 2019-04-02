@@ -35,11 +35,11 @@ Take image `docker pull andrewmhub/transmission-tracker-add`
 
 ```docker run --net=host -d -e HOSTPORT=localhost:9091 -e TR_AUTH=user:password --name=transmission-tracker-add andrewmhub/transmission-tracker-add:latest```
 
-if you need to use another torrent tracker list then use docker run env 
+if you need another torrent tracker list then use docker run env 
 
 `-e TORRENTLIST=https://raw.githubusercontent.com/user/trackerslist/master/mylist.txt`
 
-you use transmission daemon in docker then read [Docker Documentation](https://docs.docker.com/network/)
+you have transmission daemon in docker then read [Docker Documentation Network](https://docs.docker.com/network/)
 
 
 #### * Systemd way
