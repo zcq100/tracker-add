@@ -26,7 +26,7 @@ Nice=19
 ```
 </details>
 
-#### Choose you destiny:
+#### Choose your destiny:
 
 [Docker way](https://github.com/AndrewMarchukov/tracker-add#-docker-way)
 
