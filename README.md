@@ -26,6 +26,13 @@ Nice=19
 ```
 </details>
 
+Choose you destiny:
+
+[Docker way](https://github.com/AndrewMarchukov/tracker-add#-docker-way)
+
+[Systemd way](https://github.com/AndrewMarchukov/tracker-add#-systemd-way)
+
+[Simple way (for routers)](https://github.com/AndrewMarchukov/tracker-add#-simple-way-for-routers)
 
 ## Installation and usage
 
