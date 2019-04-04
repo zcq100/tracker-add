@@ -1,4 +1,4 @@
-# Get more trackers
+# Get more trackers [![](https://images.microbadger.com/badges/image/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add)     [![](https://images.microbadger.com/badges/version/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add)
 See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 
 This script automatically checks new torrents and adds trackers
@@ -44,7 +44,7 @@ Take image `docker pull andrewmhub/transmission-tracker-add`
 
 if you need another torrent tracker list then use docker run env 
 
-`-e TORRENTLIST=https://raw.githubusercontent.com/user/trackerslist/master/mylist.txt`
+`-e TORRENTLIST=https://raw.githubusercontent.com/user/trackerslist/master/mylist.txt` 
 
 you have transmission daemon in docker then read [Docker Documentation Network](https://docs.docker.com/network/)
 
