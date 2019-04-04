@@ -1,4 +1,4 @@
-# Get more trackers [![](https://images.microbadger.com/badges/version/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add) ![GitHub top language](https://img.shields.io/github/languages/top/AndrewMarchukov/tracker-add.svg)
+# Get more trackers [![](https://images.microbadger.com/badges/version/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add) ![Docker Pulls](https://img.shields.io/docker/pulls/andrewmhub/transmission-tracker-add.svg) ![GitHub top language](https://img.shields.io/github/languages/top/AndrewMarchukov/tracker-add.svg)
 See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 
 This script automatically checks new torrents and adds trackers
@@ -36,7 +36,7 @@ Nice=19
 
 ## Installation and usage
 
-#### * Docker way  ![Docker Pulls](https://img.shields.io/docker/pulls/andrewmhub/transmission-tracker-add.svg?style=social)
+#### * Docker way
 
 Take image `docker pull andrewmhub/transmission-tracker-add`
 
