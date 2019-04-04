@@ -1,4 +1,4 @@
-# Get more trackers [![](https://images.microbadger.com/badges/image/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add)     [![](https://images.microbadger.com/badges/version/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add) ![GitHub top language](https://img.shields.io/github/languages/top/AndrewMarchukov/tracker-add.svg)
+# Get more trackers [![](https://images.microbadger.com/badges/version/andrewmhub/transmission-tracker-add.svg)](https://microbadger.com/images/andrewmhub/transmission-tracker-add) ![GitHub top language](https://img.shields.io/github/languages/top/AndrewMarchukov/tracker-add.svg)
 See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 
 This script automatically checks new torrents and adds trackers
