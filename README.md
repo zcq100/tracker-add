@@ -53,7 +53,7 @@ you have transmission daemon in docker then read [Docker Documentation Network](
 
 Download script and make it executable:
 
-Edit settings for transmission set rpc-enabled, rpc-username and rpc-password
+Edit settings.json for transmission set rpc-enabled, rpc-username and rpc-password
 
 ```
 wget --no-check-certificate -O /opt/bin/add-trackers-auto.sh https://raw.githubusercontent.com/AndrewMarchukov/tracker-add/master/tracker-add-auto.sh
