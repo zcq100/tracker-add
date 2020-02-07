@@ -4,6 +4,21 @@ See no peers,seeds for some torrent(s)? Add more tracker(s) for Transmission
 This script automatically checks new torrents and adds trackers
 
 <details>
+  <summary>FAQ:</summary>
+
+```
+Q: Requirements?
+A: curl, transmission-remote or\and transmission-cli
+
+Q: How often does this check for updates for new trackers?
+A: Only when adding new torrent in transmission and only active torrents and gap 25 seconds
+
+Q: Can I add tracker to a remote server？
+A: Yes, host=host:port or host=http(s?)://host:port/transmission/
+```
+</details>
+
+<details>
   <summary>Changelog</summary>
    
 ```
