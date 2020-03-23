@@ -1,17 +1,18 @@
 #!/bin/bash
 # Get transmission credentials
-auth=user:password
-host=localhost
+auth=${TRANSMISSION_USER:-user}:${TRANSMISSION_PASS:-password}
+host=${TRANSMISSION_HOST:-localhost}
+list_url=${TRACKER_URL:-https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt}
 
 add_trackers () {
     torrent_hash=$1
- for base_url in https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt ; do
+ for base_url in "${list_url}" ; do
     echo -e "\e[1m\e[5m"
     echo "URL for ${base_url}"
     echo -e "Adding trackers for \e[91m$torrent_name..."
     echo -en "\e[0m"
     echo -e "\e[2m\e[92m"
-for tracker in $(curl -# "${base_url}") ; do
+for tracker in $(curl --location -# "${base_url}") ; do
     echo -en "\e[0m"
     echo -ne "\e[93m*\e[0m ${tracker}..."
 if transmission-remote "$host" --auth="$auth" --torrent "${torrent_hash}" -td "${tracker}" | grep -q 'success'; then
