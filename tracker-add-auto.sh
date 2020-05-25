@@ -23,9 +23,9 @@ fi
 for tracker in $(cat $trackerslist) ; do
     echo -n "${tracker}..."
 if transmission-remote "$host"  --auth="$auth" --torrent "${torrent_hash}" -td "${tracker}" | grep -q 'success'; then
-    echo ' failed.'
-else
     echo ' done.'
+else
+    echo ' already added.'
 fi
 done
 done
