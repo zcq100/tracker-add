@@ -20,10 +20,10 @@ for tracker in $(curl --location -# "${base_url}") ; do
     echo -en "\e[0m"
     echo -ne "\e[93m*\e[0m ${tracker}..."
 if transmission-remote "$host" ${auth:+--auth="$auth"} --torrent "${torrent_hash}" -td "${tracker}" | grep -q 'success'; then
-    echo -e '\e[91m failed.'
+    echo -e '\e[92m done.'
     echo -en "\e[0m"
 else
-    echo -e '\e[92m done.'
+    echo -e '\e[93m already added.'
     echo -en "\e[0m"
 fi
  done
