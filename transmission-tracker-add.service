@@ -3,6 +3,8 @@ Description=transmission tracker add
 Requires=network.target
 
 [Service]
+### use non root user example below:
+#User=debian-transmission
 Type=simple
 ExecStart=/docker/transmission/tracker-add/tracker-add-auto.sh
 ExecStop=/bin/kill -s TERM $MAINPID
