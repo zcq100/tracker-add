@@ -134,14 +134,12 @@ URL for https://hastebin.com/raw/bererufibu
 Adding trackers for Film.HDRip.AVC.mkv...
 
 ######################################################################## 100,0%
-* http://tracker.dutchtracking.nl:80/announce... failed.
-* http://tracker.edoardocolombo.eu:6969/announce... failed.
-* http://tracker.ex.ua:80/announce... failed.
-* http://tracker.kicks-ass.net:80/announce... failed.
+* http://tracker.dutchtracking.nl:80/announce... already added.
+* http://tracker.edoardocolombo.eu:6969/announce... already added.
+* http://tracker.ex.ua:80/announce... already added.
+* http://tracker.kicks-ass.net:80/announce... already added.
 * http://tracker.mg64.net:6881/announce... done.
-* http://tracker.tfile.me/announce... failed.
+* http://tracker.tfile.me/announce... already added.
 * http://tracker1.wasabii.com.tw:6969/announce... done.
 * http://tracker2.itzmx.com:6961/announce... done.
 ```
-
-Don't be confused with `failed` message. In most cases, it means tracker(s) already added and/or exists in current torrent.
